@@ -1,7 +1,6 @@
 import java.util.Scanner;
-
 public class bank {
-
+    
     public static void main(String[] args) {
 
         double moneyinaccount;
@@ -37,7 +36,7 @@ public class bank {
                 }
 
                 else {
-                    
+
                     if (amount > 1000) {
                         System.out.println(
                                 "the amount is over the limit of 1000€ \n do you want to pay later? \n yes / no");
