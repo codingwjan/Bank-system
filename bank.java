@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class bank {
-    
+
     public static void main(String[] args) {
 
         double moneyinaccount;
@@ -10,7 +10,7 @@ public class bank {
         int paylatertimespan;
         int totalpintrys;
 
-        totalpintrys = 3;
+        totalpintrys = 2;
 
         Scanner input = new Scanner(System.in);
 
@@ -21,7 +21,7 @@ public class bank {
         System.out.println("please type in you secure pin");
 
         // pin
-        while (totalpintrys > 0) {
+        while (totalpintrys >= 0) {
             pin = input.nextInt();
 
             if (pin == 1234) {
@@ -66,12 +66,12 @@ public class bank {
             }
 
             else if (totalpintrys >= 1) {
-                totalpintrys = (totalpintrys - 1);
                 System.out.println("wrong pin \n you have " + totalpintrys + " trys left");
                 System.out.println("try again");
+                totalpintrys = (totalpintrys - 1);
             }
 
-            else {
+            else if(totalpintrys == 0) {
                 totalpintrys = (totalpintrys - 1);
                 System.out.println("2 wochen timeout wegen hausmodifikationen");
                 System.exit(0);
